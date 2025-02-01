@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>assignment</title>
+    <title>Design a Pet Cart</title>
     <!-- Sora Google font cdn -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -59,6 +59,25 @@
               "custom-gradient":
                 "linear-gradient(134.71deg, rgb(248, 204, 251) 1.286%, rgb(172, 210, 253) 100%)",
             },
+            animation: {
+              twinkle: "twinkle 1s infinite", // Apply the twinkle animation for 1 second, infinitely
+            },
+            keyframes: {
+              twinkle: {
+                "0%": {
+                  opacity: "0.5",
+                  transform: "scale(1)",
+                },
+                "50%": {
+                  opacity: "1",
+                  transform: "scale(1.1)",
+                },
+                "100%": {
+                  opacity: "0.5",
+                  transform: "scale(1)",
+                },
+              },
+            },
 
             //
           },
@@ -66,10 +85,10 @@
       };
     </script>
   </head>
-  <body class="font-sora max-w-screen-2xl px-4 lg:px-8 mx-auto">
+  <body class="font-sora">
     <!-- header section -->
-    <header>
-      <nav class="bg-[#FFF9F4] pt-6 pb-6 w-full px-0">
+    <header class="max-w-screen-xl lg:px-8 mx-auto">
+      <nav class="bg-[#FFF9F4] pt-6 px-4 pb-6 w-full">
         <div class="flex justify-between items-center mx-auto">
           <!-- logo header -->
           <div class="flex space-x-3 items-center">
@@ -135,10 +154,10 @@
       <hr class="lg:hidden w-full h-[2px] bg-gray-400" />
     </header>
     <!-- banner section -->
-    <section class="mt-24">
+    <section class="mt-24 max-w-screen-xl px-4 lg:px-8 mx-auto">
       <div class="relative">
         <div class="">
-          <img class="pt-[180px] sm:pt-0" src="assets/cat-big.png" alt="" />
+          <img class="pt-[210px] sm:pt-0" src="assets/cat-big.png" alt="" />
         </div>
         <div class="absolute top-0 left-0 lg:top-4">
           <h3 class="text-5xl font-bold">
@@ -151,7 +170,9 @@
             <br />
             your furry friends. Shop now and make tails wag with joy!
           </p>
-          <button class="px-5 py-2 bg-yellow-300 rounded-lg mt-5">
+          <button
+            class="px-5 py-2 bg-yellow-300 rounded-lg mt-5 animate-twinkle"
+          >
             Find a pet
           </button>
         </div>
@@ -159,13 +180,15 @@
     </section>
 
     <!-- main section -->
-    <main>
+    <main class="max-w-screen-xl px-4 lg:px-8 mx-auto">
       <!-- Browse by Categories section-->
       <section class="mt-32">
         <h3 class="mb-8 font-bold text-lg fontFamily:adlam">
           Browse By Categories
         </h3>
-        <div class="grid lg:grid-cols-6 grid-cols-2 gap-4">
+        <div
+          class="grid lg:grid-cols-6 grid-cols-2 gap-4 sm:grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))]"
+        >
           <div
             class="bg-primary px-4 py-8 relative rounded-xl items-center flex flex-col"
           >
@@ -258,9 +281,66 @@
           </div>
         </div>
       </section>
+      <section class="py-16 bg-gray-100 mt-10">
+        <div class="max-w-7xl mx-auto text-center">
+          <!-- Section Title -->
+          <h2 class="text-4xl font-bold text-gray-800 mb-8">
+            Meet Our Adorable Pets
+          </h2>
+          <p class="text-lg text-gray-600 mb-12">
+            Explore our lovable pets, each with a unique personality! From
+            playful puppies to cozy kittens, there's always someone to love.
+          </p>
+
+          <!-- Pet Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- Pet 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <img
+                src="assets/kitty-cat-kitten-pet-1.jpeg"
+                alt="Pet 1"
+                class="w-full h-64 object-cover rounded-md mb-4"
+              />
+              <h3 class="text-2xl font-semibold text-gray-800">Bella</h3>
+              <p class="text-gray-600">
+                A playful and energetic pup who loves to chase balls!
+              </p>
+            </div>
+
+            <!-- Pet 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <img
+                src="assets/kittens-cat-cat-puppy-rush-2.jpeg"
+                alt="Pet 2"
+                class="w-full h-64 object-cover rounded-md mb-4"
+              />
+              <h3 class="text-2xl font-semibold text-gray-800">Milo</h3>
+              <p class="text-gray-600">
+                A curious cat who enjoys exploring new places and taking naps.
+              </p>
+            </div>
+
+            <!-- Pet 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <img
+                src="assets/pexels-photo-9.jpeg"
+                alt="Pet 3"
+                class="w-full h-[260px] object-cover rounded-md mb-4"
+              />
+              <h3 class="text-2xl font-semibold text-gray-800">Luna</h3>
+              <p class="text-gray-600">
+                A sweet and gentle bunny who loves cuddles and treats.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- trenending pet products section -->
       <section class="bg-secondary mt-56 pt-64">
-        <h3 class="mb-6 font-bold fontFamily:adlam">Trending Pet Products</h3>
+        <h3 class="mb-6 font-bold fontFamily:adlam text-2xl">
+          Trending Pet Products
+        </h3>
         <!-- cards -->
         <div>
           <div class="grid grid-cols-2 gap-4 sm:grid-cols-5 sm:grid-rows-6">
@@ -392,7 +472,7 @@
               </div>
             </div>
             <div
-              class="rounded-xl border flex items-center lg:block sm:hidden bg-white gap-5 px-2"
+              class="rounded-xl border md:flex items-center bg-white gap-5 px-2 hidden lg:block"
             >
               <div class="bg-secondary px-2 rounded">
                 <img src="assets/rabbit-cartoon.png" alt="" />
@@ -408,8 +488,9 @@
         </div>
       </section>
       <!-- Everyday low price -->
-      <section>
-        <div class="flex flex-wrap gap-2 sm:gap-[calc(1%-5px)]">
+      <section class="mt-20">
+        <h2 class="font-bold fontFamily text-xl">Everyday low Price</h2>
+        <div class="flex flex-wrap gap-2 sm:gap-[calc(1%-5px)] mt-12">
           <!-- first card -->
           <div
             class="w-full sm:w-[59%] bg-custom-gradient h-[480px] px-4 py-2 flex items-center justify-center gap-10 rounded-xl"
@@ -444,7 +525,14 @@
             </div>
           </div>
         </div>
-        <!-- get-pasome news card -->
+      </section>
+    </main>
+    <!-- footer section -->
+    <footer class="max-w-screen-2xl mx-auto relative mt-60">
+      <!-- get pawsome news -->
+      <section
+        class="mx-auto relative -mb-[240px] z-10 max-w-[90%] text-center"
+      >
         <div
           class="flex items-center px-4 py-5 gap-8 flex-col sm:flex-row bg-secondary rounded-xl mt-10"
         >
@@ -468,8 +556,48 @@
           </div>
         </div>
       </section>
-    </main>
-    <!-- footer section -->
-    <footer></footer>
+
+      <div
+        class="flex gap-3 bg-[#FFDC2680] lg:px-[156px] justify-between flex-col md:flex-row px-[14px] pb-[60px] md:pb-[140px] pt-[375px]"
+      >
+        <div>
+          <div class="flex items-center gap-2">
+            <img class="grayscale" src="assets/logo-header.png" alt="" />
+            <h3 class="text-2xl font-normal font-adlam max-[640px]">
+              Browse <span class="text-[#FFDC26]">4</span>Pets
+            </h3>
+          </div>
+          <p class="text-gray-500 mt-4">
+            Discover a world of treats, toys, and <br />
+            essentials handpicked for your furry <br />
+            friends
+          </p>
+        </div>
+        <div>
+          <ul class="space-y-2 mt-2">
+            <li>Find a pet</li>
+            <li>Breeds</li>
+            <li>Contact us</li>
+          </ul>
+        </div>
+        <div>
+          <p class="mt-4">Follow Us</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-3xl hover:text-blue-800"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" class="text-3xl hover:text-pink-700"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="text-3xl hover:text-blue-700"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="#" class="text-3xl hover:text-red-800"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
