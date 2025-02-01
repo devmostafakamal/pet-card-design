@@ -337,13 +337,13 @@
       </section>
 
       <!-- trenending pet products section -->
-      <section class="bg-secondary mt-56 pt-64">
+      <section class="bg-secondary mt-56 pt-40 pb-40">
         <h3 class="mb-6 font-bold fontFamily:adlam text-2xl">
           Trending Pet Products
         </h3>
         <!-- cards -->
         <div>
-          <div class="grid grid-cols-2 gap-4 sm:grid-cols-5 sm:grid-rows-6">
+          <div class="grid grid-cols-2 gap-4 sm:grid-cols-5 sm:grid-rows-3">
             <!-- big-card -->
             <div
               class="rounded-xl col-span-2 row-span-3 sm:col-span-2 sm:row-span-3 border bg-primary h-[402px]"
@@ -472,7 +472,7 @@
               </div>
             </div>
             <div
-              class="rounded-xl border md:flex items-center bg-white gap-5 px-2 hidden lg:block"
+              class="rounded-xl border md:flex items-center bg-white gap-5 px-2 hidden lg:flex"
             >
               <div class="bg-secondary px-2 rounded">
                 <img src="assets/rabbit-cartoon.png" alt="" />
@@ -489,16 +489,18 @@
       </section>
       <!-- Everyday low price -->
       <section class="mt-20">
-        <h2 class="font-bold fontFamily text-xl">Everyday low Price</h2>
+        <h2 class="font-bold fontFamily text-2xl">Everyday low Price</h2>
         <div class="flex flex-wrap gap-2 sm:gap-[calc(1%-5px)] mt-12">
           <!-- first card -->
           <div
             class="w-full sm:w-[59%] bg-custom-gradient h-[480px] px-4 py-2 flex items-center justify-center gap-10 rounded-xl"
           >
             <div class="">
-              <p class="text-gray-400 sm:hidden md:block mb-2">Under Price</p>
+              <p class="text-gray-400 max-[640px]:hidden md:block mb-2">
+                Under Price
+              </p>
               <h3 class="font-bold">Pet Grooming Mitt</h3>
-              <p class="text-white sm:hidden md:block mt-4">
+              <p class="text-white max-[640px]:hidden md:block mt-4">
                 (Easy Hair Removal)
               </p>
               <span class="text-2xl font-extrabold inline-block mt-4"
@@ -531,10 +533,10 @@
     <footer class="max-w-screen-2xl mx-auto relative mt-60">
       <!-- get pawsome news -->
       <section
-        class="mx-auto relative -mb-[240px] z-10 max-w-[90%] text-center"
+        class="mx-auto relative -mb-[240px] z-10 max-w-[90%] max-[640px]:text-center"
       >
         <div
-          class="flex items-center px-4 py-5 gap-8 flex-col sm:flex-row bg-secondary rounded-xl mt-10"
+          class="flex items-center px-4 py-5 gap-8 flex-col sm:flex-row bg-secondary rounded-xl mt-10 sm:justify-around"
         >
           <div>
             <img src="assets/cute-pet-mid.png" alt="" />
@@ -558,7 +560,7 @@
       </section>
 
       <div
-        class="flex gap-3 bg-[#FFDC2680] lg:px-[156px] justify-between flex-col md:flex-row px-[14px] pb-[60px] md:pb-[140px] pt-[375px]"
+        class="flex gap-3 bg-[#FFDC2680] lg:px-[156px] justify-between flex-col md:flex-row px-[14px] pb-[60px] md:pb-[140px] pt-[375px] sm:items-end"
       >
         <div>
           <div class="flex items-center gap-2">
